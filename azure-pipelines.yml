@@ -10,13 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: AzureResourceManagerTemplateDeployment@3
+- task: AzureFileCopy@4
   inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'MSDN Platforms Subscription(1)(99ef40ea-cf39-45c4-be67-26642785b992)'
-    subscriptionId: '99ef40ea-cf39-45c4-be67-26642785b992'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'AzureDevops'
-    location: 'East US'
-    templateLocation: 'Linked artifact'
-    deploymentMode: 'Incremental'
+    SourcePath: 'azurestoragepgn'
+    azureSubscription: 'MSDN Platforms Subscription(1)(99ef40ea-cf39-45c4-be67-26642785b992)'
+    Destination: 'AzureBlob'
+    storage: 'pgnstorage'
+    ContainerName: 'pgncontainer'
