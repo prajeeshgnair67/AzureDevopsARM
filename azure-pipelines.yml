@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'MSDN Platforms Subscription (99ef40ea-cf39-45c4-be67-26642785b992)'
+    subscriptionId: '99ef40ea-cf39-45c4-be67-26642785b992'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'AzureHostingTest'
+    location: 'East US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'prajeeshgnair67 / AzureDevopsARM101-vm-windows-create/azuredeploy.json'
+    csmParametersFile: 'prajeeshgnair67 / AzureDevopsARM101-vm-windows-create/azuredeploy.parameters.json'
+    deploymentMode: 'Incremental'
