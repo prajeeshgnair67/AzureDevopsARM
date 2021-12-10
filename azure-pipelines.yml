@@ -20,4 +20,5 @@ steps:
     location: 'East US'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://github.com/prajeeshgnair67/AzureDevopsARM/blob/main/101-vm-windows-create/azuredeploy.json'
+    csmParametersFileLink: 'https://github.com/prajeeshgnair67/AzureDevopsARM/blob/main/101-vm-windows-create/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
