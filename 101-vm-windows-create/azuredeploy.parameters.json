@@ -1,5 +1,15 @@
 {
-  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {}
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachines_Ubuntuvm1_name": {
+            "value": null
+        },
+        "disks_Ubuntuvm1_disk1_11be40f608654ffba3109a83d4d468e8_externalid": {
+            "value": null
+        },
+        "networkInterfaces_ubuntuvm1316_externalid": {
+            "value": null
+        }
+    }
 }
